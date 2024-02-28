@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.u-container {
+  @include for-size(phone-only) {
+    padding-inline: 2.4rem;
+  }
+
+  @include for-size(desktop-up) {
+    padding-inline: 11.45rem;
+  }
+}
+
+.u-mx-auto {
+  margin-inline: auto;
+}
+
+.u-min-h-screen {
+  min-height: 100vh;
+}
+
+.u-flex {
+  display: flex;
+}
+
+.u-justify-center {
+  justify-content: center;
+}
+
+.u-items-center {
+  align-items: center;
+}
+
+.u-h-full {
+  height: 100%;
+}
+
+.u-gap-33 {
+  gap: 3.3rem;
+}
