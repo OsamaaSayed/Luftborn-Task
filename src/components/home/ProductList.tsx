@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Product } from '../../types';
+
 import ProductCard from '../shared/ProductCard';
 
+import { Product } from '../../types';
 import { backgroundColors } from '../../constants';
 
 const ProductList = () => {

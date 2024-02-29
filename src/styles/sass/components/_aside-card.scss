@@ -3,6 +3,7 @@
 .aside {
   background-color: $color-primary;
   border-radius: $border-default;
+  height: fit-content;
 
   &__header {
     display: flex;
