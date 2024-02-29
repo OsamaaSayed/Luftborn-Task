@@ -1,45 +1,54 @@
+import { useEffect, useState } from 'react';
+
+import Aside from '../components/layout/Aside';
+import ProductCard from '../components/shared/ProductCard';
+
+import { Product } from '../types';
+
 const Home = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch('https://fakestoreapi.com/products?limit=10');
+
+        if (!res.ok) {
+          throw new Error('Failed fetching products!');
+        }
+
+        const data = await res.json();
+        setProducts(data);
+      } catch (err) {
+        // setError(err.message);
+        console.log('🚀 ~ err:', err);
+      } finally {
+        setIsLoading(false);
+      }
+    })();
+  }, []);
+
   return (
     <main className='u-min-h-screen u-container u-mx-auto u-flex u-justify-center u-items-center'>
-      <div className='u-h-full u-flex u-gap-33'>
-        <aside className='aside'>
-          <div className='aside__header'>
-            <img
-              className='aside__header-img u-mx-auto'
-              src='/images/admin.png'
-              alt='admin'
-            />
-
-            <div className='aside__header-title'>
-              <span>Report for</span>
-              <p>Best Sales</p>
-            </div>
-          </div>
-
-          <div className='aside__links'>
-            <a
-              className='aside__links-anchor'
-              href='#'
-            >
-              Daily
-            </a>
-            <a
-              className='aside__links-anchor'
-              href='#'
-            >
-              Weekly
-            </a>
-            <a
-              className='aside__links-anchor'
-              href='#'
-            >
-              Monthly
-            </a>
-          </div>
-        </aside>
+      <div className='u-flex u-gap-33'>
+        <Aside />
 
         <section>
-          <div className='section-main'></div>
+          <div className='section-main'>
+            {isLoading && <h1>Loading...</h1>}
+            {!isLoading && error && <h1>Error...</h1>}
+            {!isLoading &&
+              !error &&
+              products.length > 0 &&
+              products.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                />
+              ))}
+          </div>
         </section>
       </div>
     </main>
