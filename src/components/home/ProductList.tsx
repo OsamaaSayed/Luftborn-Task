@@ -30,7 +30,7 @@ const ProductList = () => {
   }, []);
 
   return (
-    <section className='section-main'>
+    <section className='section-products'>
       {isLoading && <h1>Loading...</h1>}
       {!isLoading && error && <h1>{error}</h1>}
 

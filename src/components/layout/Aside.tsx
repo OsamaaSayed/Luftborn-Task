@@ -3,7 +3,7 @@ const Aside = () => {
     <aside className='aside'>
       <div className='aside__header'>
         <img
-          className='aside__header-img u-mx-auto'
+          className='aside__header-img'
           src='/images/profile-pic.png'
           alt='admin'
         />
