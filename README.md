@@ -1,30 +1,57 @@
-# React + TypeScript + Vite
+# Luftborn Task 🎉 | [Live](https://luftborn-task-osamaasayed.vercel.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### A repo for Luftborn task built using React, Typescript & Sass
+#### ✅ Fully Responsive For All Screens
 
-Currently, two official plugins are available:
+## 📸 Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="https://private-user-images.githubusercontent.com/90098467/309098997-fc19fb0d-63bb-41ff-9b91-bee0b6e49084.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDkyNDg1NTMsIm5iZiI6MTcwOTI0ODI1MywicGF0aCI6Ii85MDA5ODQ2Ny8zMDkwOTg5OTctZmMxOWZiMGQtNjNiYi00MWZmLTliOTEtYmVlMGI2ZTQ5MDg0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjI5VDIzMTA1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ2MGY0OWVjZGY3Y2I4YzZlYzJhNjE2ZDlkM2U0ZTczOTdkOWJmN2EwMWZhMzcxNDljYjhkMjBiZmVmN2NjM2ImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.YJXLo6xEgVYm0UsJVIi9Ls1oTwrrdR4omeOAPgS9diM"/>
 
-## Expanding the ESLint configuration
+## 📁Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+📦src
+ ┣ 📂assets
+ ┃ ┗ 📜react.svg
+ ┣ 📂components
+ ┃ ┣ 📂home
+ ┃ ┃ ┗ 📜ProductList.tsx
+ ┃ ┣ 📂layout
+ ┃ ┃ ┗ 📜Aside.tsx
+ ┃ ┗ 📂shared
+ ┃ ┃ ┗ 📜ProductCard.tsx
+ ┣ 📂constants
+ ┃ ┗ 📜index.ts
+ ┣ 📂pages
+ ┃ ┗ 📜Home.tsx
+ ┣ 📂styles
+ ┃ ┗ 📂sass
+ ┃ ┃ ┣ 📂abstracts
+ ┃ ┃ ┃ ┣ 📜_functions.scss
+ ┃ ┃ ┃ ┣ 📜_index.scss
+ ┃ ┃ ┃ ┣ 📜_mixins.scss
+ ┃ ┃ ┃ ┗ 📜_variables.scss
+ ┃ ┃ ┣ 📂base
+ ┃ ┃ ┃ ┣ 📜_animations.scss
+ ┃ ┃ ┃ ┣ 📜_base.scss
+ ┃ ┃ ┃ ┣ 📜_index.scss
+ ┃ ┃ ┃ ┣ 📜_typography.scss
+ ┃ ┃ ┃ ┗ 📜_utilities.scss
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┣ 📜_aside-card.scss
+ ┃ ┃ ┃ ┣ 📜_card.scss
+ ┃ ┃ ┃ ┗ 📜_index.scss
+ ┃ ┃ ┣ 📂layout
+ ┃ ┃ ┃ ┣ 📜_grid.scss
+ ┃ ┃ ┃ ┗ 📜_index.scss
+ ┃ ┃ ┣ 📂pages
+ ┃ ┃ ┃ ┣ 📜_home.scss
+ ┃ ┃ ┃ ┗ 📜_index.scss
+ ┃ ┃ ┗ 📜style.scss
+ ┣ 📂types
+ ┃ ┗ 📜index.ts
+ ┣ 📜App.tsx
+ ┣ 📜index.css
+ ┣ 📜main.tsx
+ ┗ 📜vite-env.d.ts
+```
