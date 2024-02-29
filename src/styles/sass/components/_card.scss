@@ -8,45 +8,102 @@
   height: fit-content;
 
   &__face {
+    @include for-size(phone-only) {
+      padding-inline: 2.4rem;
+      padding-block: 2.8rem;
+    }
+
     border-radius: $border-default;
     background-color: $color-primary;
     padding-inline: 3rem;
     padding-top: 3.7rem;
     padding-bottom: 2.4rem;
 
-    &-category {
-      font-size: 1.8rem;
-      font-weight: 500;
-    }
+    &-header {
+      display: flex;
+      justify-content: space-between;
 
-    &-btn {
-      appearance: none;
-      background: none;
-      border: none;
-      outline: none;
-      box-shadow: none;
-      cursor: pointer;
+      .category {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
 
-      .dot {
-        display: block;
-        width: 0.5rem;
-        height: 0.5rem;
-        border-radius: 50%;
-        background-color: $color-primary-light;
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        appearance: none;
+        background: none;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+
+        .dot {
+          display: block;
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          background-color: $color-primary-light;
+        }
       }
     }
 
     &-price {
+      @include for-size(phone-only) {
+        display: none;
+      }
+
+      &-sm {
+        @include for-size(tablet-portrait-up) {
+          display: none;
+        }
+
+        align-items: center;
+        gap: 3rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 0.6rem;
+
+        .price {
+          font-size: 3.9rem;
+          font-weight: 300;
+        }
+
+        .title {
+          font-size: 1rem;
+          font-weight: 400;
+          color: $color-primary-light;
+        }
+      }
+
       font-weight: 300;
       font-size: 3.9rem;
       margin-top: 2.4rem;
       margin-bottom: 0.8rem;
     }
 
-    &-title {
-      color: $color-primary-light;
-      font-weight: 400;
-      font-size: 1.2rem;
+    &-footer {
+      @include for-size(phone-only) {
+        display: none;
+      }
+
+      display: flex;
+      justify-content: space-between;
+      gap: 2.2rem;
+
+      .title {
+        color: $color-primary-light;
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+
+      .store {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        text-align: center;
+      }
     }
   }
 }
