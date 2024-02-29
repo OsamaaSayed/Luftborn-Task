@@ -21,9 +21,8 @@ const Home = () => {
 
         const data = await res.json();
         setProducts(data);
-      } catch (err) {
-        // setError(err.message);
-        console.log('🚀 ~ err:', err);
+      } catch (err: unknown) {
+        setError((err as Error).message);
       } finally {
         setIsLoading(false);
       }
@@ -35,20 +34,19 @@ const Home = () => {
       <div className='u-flex u-gap-33'>
         <Aside />
 
-        <section>
-          <div className='section-main'>
-            {isLoading && <h1>Loading...</h1>}
-            {!isLoading && error && <h1>Error...</h1>}
-            {!isLoading &&
-              !error &&
-              products.length > 0 &&
-              products.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                />
-              ))}
-          </div>
+        <section className='section-main'>
+          {isLoading && <h1>Loading...</h1>}
+          {!isLoading && error && <h1>{error}</h1>}
+
+          {!isLoading &&
+            !error &&
+            products.length > 0 &&
+            products.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+              />
+            ))}
         </section>
       </div>
     </main>

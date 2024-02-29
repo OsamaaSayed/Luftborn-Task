@@ -7,7 +7,7 @@ interface ProductCardProps extends React.ComponentPropsWithoutRef<'div'> {
 const ProductCard = ({
   product: { title, description, price, image, rating, category },
 }: ProductCardProps) => {
-  return <div>ProductCard</div>;
+  return <div className='card'></div>;
 };
 
 export default ProductCard;
