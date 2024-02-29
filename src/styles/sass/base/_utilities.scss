@@ -5,9 +5,27 @@
     padding-inline: 2.4rem;
   }
 
+  @include for-size(tablet-portrait-up) {
+    padding-inline: 2.4rem;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    padding-inline: 2.4rem;
+  }
+
   @include for-size(desktop-up) {
     padding-inline: 11.45rem;
   }
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .u-mx-auto {
@@ -22,16 +40,40 @@
   display: flex;
 }
 
+.u-flex-col {
+  flex-direction: column;
+}
+
 .u-justify-center {
   justify-content: center;
+}
+
+.u-justify-between {
+  justify-content: space-between;
 }
 
 .u-items-center {
   align-items: center;
 }
 
+.u-items-end {
+  align-items: end;
+}
+
 .u-h-full {
   height: 100%;
+}
+
+.u-gap-3 {
+  gap: 0.3rem;
+}
+
+.u-gap-22 {
+  gap: 2.2rem;
+}
+
+.u-gap-24 {
+  gap: 2.2rem;
 }
 
 .u-gap-33 {

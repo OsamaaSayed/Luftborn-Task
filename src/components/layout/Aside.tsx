@@ -4,7 +4,7 @@ const Aside = () => {
       <div className='aside__header'>
         <img
           className='aside__header-img u-mx-auto'
-          src='/images/admin.png'
+          src='/images/profile-pic.png'
           alt='admin'
         />
 
@@ -14,26 +14,34 @@ const Aside = () => {
         </div>
       </div>
 
-      <div className='aside__links'>
-        <a
-          className='aside__links-anchor'
-          href='#'
-        >
-          Daily
-        </a>
-        <a
-          className='aside__links-anchor'
-          href='#'
-        >
-          Weekly
-        </a>
-        <a
-          className='aside__links-anchor'
-          href='#'
-        >
-          Monthly
-        </a>
-      </div>
+      <ul className='aside__links'>
+        <li>
+          <a
+            className='aside__links-anchor'
+            href='#'
+          >
+            Daily
+          </a>
+        </li>
+
+        <li>
+          <a
+            className='aside__links-anchor active'
+            href='#'
+          >
+            Weekly
+          </a>
+        </li>
+
+        <li>
+          <a
+            className='aside__links-anchor'
+            href='#'
+          >
+            Monthly
+          </a>
+        </li>
+      </ul>
     </aside>
   );
 };

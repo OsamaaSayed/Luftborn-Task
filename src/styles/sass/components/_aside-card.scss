@@ -2,14 +2,14 @@
 
 .aside {
   background-color: $color-primary;
-  border-radius: 1.2rem;
+  border-radius: $border-default;
 
   &__header {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
     max-height: 35.4rem;
-    border-radius: 1.2rem;
+    border-radius: $border-default;
     padding-inline: 5rem;
     padding-top: 3.2rem;
     padding-bottom: 1rem;
@@ -41,6 +41,7 @@
   }
 
   &__links {
+    list-style: none;
     padding-inline: 2.4rem;
     padding-bottom: 3.3rem;
     padding-top: 2.6rem;
@@ -48,20 +49,14 @@
     flex-direction: column;
     gap: 1.7rem;
 
-    &-anchor:nth-of-type(1) {
+    &-anchor {
       color: $color-secondary-dark;
       font-size: 1.8rem;
       text-decoration: none;
     }
-    &-anchor:nth-of-type(2) {
+
+    &-anchor.active {
       color: $color-white;
-      font-size: 1.8rem;
-      text-decoration: none;
-    }
-    &-anchor:nth-of-type(3) {
-      color: $color-secondary-dark;
-      font-size: 1.8rem;
-      text-decoration: none;
     }
   }
 }

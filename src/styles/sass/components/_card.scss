@@ -1,5 +1,52 @@
 @use '../abstracts' as *;
 
-.card { 
+.card {
+  border-radius: $border-default;
+  border-bottom-left-radius: 1.6rem;
+  border-bottom-right-radius: 1.6rem;
+  padding-top: 4.2rem;
+  height: fit-content;
 
+  &__face {
+    border-radius: $border-default;
+    background-color: $color-primary;
+    padding-inline: 3rem;
+    padding-top: 3.7rem;
+    padding-bottom: 2.4rem;
+
+    &-category {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    &-btn {
+      appearance: none;
+      background: none;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      cursor: pointer;
+
+      .dot {
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: $color-primary-light;
+      }
+    }
+
+    &-price {
+      font-weight: 300;
+      font-size: 3.9rem;
+      margin-top: 2.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    &-title {
+      color: $color-primary-light;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+  }
 }
