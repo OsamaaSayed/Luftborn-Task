@@ -1,15 +1,29 @@
 @use '../abstracts' as *;
 @use '../base/' as *;
 
+%skeleton-background {
+  background: linear-gradient(
+    to right,
+    $color-secondary-dark,
+    $color-primary-light,
+    $color-secondary-dark
+  );
+  background-size: 200%;
+  background-position: left;
+}
+
+%skeleton-load {
+  animation: load 1s ease-out 0s infinite normal;
+}
+
 .card {
   border-radius: $border-default;
   border-bottom-left-radius: 1.6rem;
   border-bottom-right-radius: 1.6rem;
   padding-top: 4.2rem;
   height: fit-content;
-  background: linear-gradient(to right, #f1f0f0, #c1c0c0, #f1f0f0);
-  background-size: 200%;
-  background-position: left;
+
+  background-color: $color-primary;
 
   &__face {
     @include for-size(phone-only) {
@@ -18,7 +32,7 @@
     }
 
     border-radius: $border-default;
-    background-color: #f3f3f3;
+    background-color: $color-secondary-dark;
     padding-inline: 3rem;
     padding-top: 3.7rem;
     padding-bottom: 2.4rem;
@@ -32,10 +46,9 @@
         font-weight: 500;
         width: 12rem;
         height: 2rem;
-        background: linear-gradient(to right, #f1f0f0, #c1c0c0, #f1f0f0);
-        animation: load 1s ease-out 0s infinite normal;
-        background-size: 200%;
-        background-position: left;
+
+        @extend %skeleton-load;
+        @extend %skeleton-background;
       }
 
       .btn {
@@ -54,10 +67,9 @@
           width: 0.5rem;
           height: 0.5rem;
           border-radius: 50%;
-          background: linear-gradient(to right, #f1f0f0, #c1c0c0, #f1f0f0);
-          animation: load 1s ease-out 0s infinite normal;
-          background-size: 200%;
-          background-position: left;
+
+          @extend %skeleton-load;
+          @extend %skeleton-background;
         }
       }
     }
@@ -83,9 +95,9 @@
           font-weight: 300;
           width: 11.5rem;
           height: 4.6rem;
-          background: linear-gradient(to right, #f1f0f0, #c1c0c0, #f1f0f0);
-          background-size: 200%;
-          background-position: left;
+
+          @extend %skeleton-load;
+          @extend %skeleton-background;
         }
 
         .title {
@@ -94,9 +106,9 @@
           color: $color-primary-light;
           width: 11.5rem;
           height: 2.3rem;
-          background: linear-gradient(to right, #f1f0f0, #c1c0c0, #f1f0f0);
-          background-size: 200%;
-          background-position: left;
+
+          @extend %skeleton-load;
+          @extend %skeleton-background;
         }
       }
 
@@ -104,11 +116,12 @@
       font-size: 3.9rem;
       margin-top: 2.4rem;
       margin-bottom: 0.8rem;
-      background: linear-gradient(to right, #f1f0f0, #c1c0c0, #f1f0f0);
-      background-size: 200%;
-      background-position: left;
       width: 13rem;
       height: 4.6rem;
+      animation: load 1s ease-out 0s infinite normal;
+
+      @extend %skeleton-load;
+      @extend %skeleton-background;
     }
 
     &-footer {
@@ -121,14 +134,13 @@
       gap: 2.2rem;
 
       .title {
-        background: linear-gradient(to right, #f1f0f0, #c1c0c0, #f1f0f0);
-        animation: load 1s ease-out 0s infinite normal;
-        background-size: 200%;
-        background-position: left;
         font-weight: 400;
         font-size: 1.2rem;
         width: 14rem;
         height: 3rem;
+
+        @extend %skeleton-load;
+        @extend %skeleton-background;
       }
 
       .store {
@@ -138,10 +150,9 @@
         text-align: center;
         width: 3.3rem;
         height: 2.4rem;
-        background: linear-gradient(to right, #f1f0f0, #c1c0c0, #f1f0f0);
-        animation: load 1s ease-out 0s infinite normal;
-        background-size: 200%;
-        background-position: left;
+
+        @extend %skeleton-load;
+        @extend %skeleton-background;
       }
     }
   }

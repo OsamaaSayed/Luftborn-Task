@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
 import ProductCard from '../shared/ProductCard';
+import ProductCardSkeleton from '../shared/ProductCardSkeleton';
 
 import { Product } from '../../types';
 import { backgroundColors } from '../../constants';
-import ProductCardSkeleton from '../shared/ProductCardSkeleton';
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
