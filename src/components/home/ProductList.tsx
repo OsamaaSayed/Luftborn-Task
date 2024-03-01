@@ -4,6 +4,7 @@ import ProductCard from '../shared/ProductCard';
 
 import { Product } from '../../types';
 import { backgroundColors } from '../../constants';
+import ProductCardSkeleton from '../shared/ProductCardSkeleton';
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -31,8 +32,18 @@ const ProductList = () => {
 
   return (
     <section className='section-products'>
-      {isLoading && <h1>Loading...</h1>}
-      {!isLoading && error && <h1>{error}</h1>}
+      {isLoading &&
+        Array.from(Array(10).keys()).map((_, index) => (
+          <ProductCardSkeleton key={index} />
+        ))}
+
+      {!isLoading && error && (
+        <img
+          className='section-products__img'
+          src='/images/error.png'
+          alt='error'
+        />
+      )}
 
       {!isLoading &&
         !error &&

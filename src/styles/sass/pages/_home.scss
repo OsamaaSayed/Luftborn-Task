@@ -16,6 +16,8 @@
 
 .section-products {
   display: grid;
+  column-gap: 3rem;
+  row-gap: 3.3rem;
 
   @include for-size(phone-only) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -24,31 +26,51 @@
 
   @include for-size(tablet-portrait-up) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    column-gap: 3rem;
-    row-gap: 3.3rem;
   }
 
   @include for-size(tablet-landscape-up) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 3rem;
-    row-gap: 3.3rem;
   }
 
   @include for-size(desktop-up) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 3rem;
-    row-gap: 3.3rem;
   }
 
   @include for-size(mid-desktop-up) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    column-gap: 3rem;
-    row-gap: 3.3rem;
   }
 
   @include for-size(big-desktop-up) {
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    column-gap: 3rem;
-    row-gap: 3.3rem;
+  }
+
+  &__img {
+    width: 100%;
+    max-height: 30rem;
+    margin: auto;
+
+    @include for-size(phone-only) {
+      grid-column: span 1;
+    }
+
+    @include for-size(tablet-portrait-up) {
+      grid-column: span 1;
+    }
+
+    @include for-size(tablet-landscape-up) {
+      grid-column: span 2;
+    }
+
+    @include for-size(desktop-up) {
+      grid-column: span 3;
+    }
+
+    @include for-size(mid-desktop-up) {
+      grid-column: span 4;
+    }
+
+    @include for-size(big-desktop-up) {
+      grid-column: span 5;
+    }
   }
 }

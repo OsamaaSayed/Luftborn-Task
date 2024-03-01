@@ -12,7 +12,7 @@ const ProductCard = ({
   return (
     <div
       className='card'
-      style={{ backgroundColor }}
+      style={{ background:backgroundColor }}
     >
       <div className='card__face'>
         <div className='card__face-header'>
